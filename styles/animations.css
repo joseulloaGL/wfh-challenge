@@ -1,10 +1,41 @@
-#square-fill-1  {
-  animation: square-fill-1 1s ease infinite;
+#square-fill-1, #square-1 {
+  animation: movement-1 8s ease infinite alternate;
   transform-origin: center;
   transform-box: fill-box;
 }
 
-@keyframes square-fill-1 {
+#square-fill-2, #square-2 {
+  animation: movement-2 8s ease infinite alternate;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#square-fill-3, #square-3 {
+  animation: movement-3 8s ease infinite alternate;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+
+#right-hand {
+  animation: swing 4s ease-in-out infinite alternate;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+#shoe {
+  animation: swing 2s ease-in-out infinite alternate;
+  transform-origin: right;
+  transform-box: fill-box;
+}
+
+#code-window {
+  animation: minimize 1s 3s linear infinite alternate;
+  transform-origin: bottom right;
+  transform-box: fill-box;
+}
+
+@keyframes spin {
   from {
     transform: rotateZ(0deg);
   }
@@ -13,15 +44,7 @@
   }
 }
 
-
-
-#right-hand {
-  animation: right-hand 4s ease-in-out infinite alternate;
-  transform-origin: bottom;
-  transform-box: fill-box;
-}
-
-@keyframes right-hand {
+@keyframes swing {
   from {
     transform: rotate(-10deg);
   }
@@ -30,19 +53,86 @@
   }
 }
 
-
-#shoe {
-  animation: right-hand 2s ease-in-out infinite alternate;
-  transform-origin: right;
-  transform-box: fill-box;
+@keyframes minimize {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  25% {
+    transform: scale(.75) translate(0, 2vh);
+  }
+  50% {
+    transform: scale(.5) translate(0, 5vh);
+  }
+  75% {
+    transform: scale(.25) translate(0, 8vh);
+  }
+  100% {
+    transform: scale(0) translate(0, 25vh);
+  }
 }
 
-@keyframes shoe {
-  from {
-    transform: rotateZ(0deg);
+@keyframes grow {
+  from{
+    transform: scale(1);
   }
   to {
-    transform: rotateZ(-120deg);
-    transform: rotateY(10);
+    transform: scale(1.5);
+  }
+}
+
+@keyframes movement-1 {
+  0% {
+    transform: translate(0, 0) rotateZ(0deg);
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: translate(1vw, 3vh) rotateZ(60deg);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translate(7vw, 3vh) rotateZ(180deg);
+  }
+}
+
+
+@keyframes movement-2 {
+  0% {
+    transform: translate(0, 0) rotateZ(0deg);
+    animation-timing-function: ease-in;
+  }
+  25% {
+    transform: translate(-8vw, -3.5vh) rotateZ(60deg);
+    animation-timing-function: ease-out;
+  }
+  50% {
+    transform: translate(-10vw, 8vh) rotateZ(360deg);
+  }
+  75% {
+    transform: translate(-8vw, 15vh) rotateZ(60deg);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translate(0, 0) rotateZ(0deg);
+    animation-timing-function: ease-in;
+  }
+}
+
+@keyframes movement-3 {
+  0% {
+    transform: translate(0, 0) rotateZ(0deg);
+    animation-timing-function: ease-in;
+  }
+  25% {
+    transform: translate(8vw, 3.5vh) rotateZ(60deg);
+  }
+  50% {
+    transform: translate(10vw, -8vh) rotateZ(180deg);
+  }
+  75% {
+    transform: translate(8vw, -3.5vh) rotateZ(60deg);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translate(0, 0) rotateZ(0deg);
   }
 }
