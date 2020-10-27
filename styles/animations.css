@@ -5,13 +5,13 @@
 }
 
 #square-fill-2, #square-2 {
-  animation: movement-2 8s ease infinite alternate;
+  animation: movement-2 20s ease infinite alternate;
   transform-origin: center;
   transform-box: fill-box;
 }
 
 #square-fill-3, #square-3 {
-  animation: movement-3 8s ease infinite alternate;
+  animation: movement-3 10s ease infinite alternate;
   transform-origin: center;
   transform-box: fill-box;
 }
@@ -86,11 +86,11 @@
     animation-timing-function: ease-in;
   }
   50% {
-    transform: translate(1vw, 3vh) rotateZ(60deg);
+    transform: translate(1vw, 3vh) rotateZ(180deg);
     animation-timing-function: ease-out;
   }
   100% {
-    transform: translate(7vw, 3vh) rotateZ(180deg);
+    transform: translate(7vw, 3vh) rotateZ(360deg);
   }
 }
 
