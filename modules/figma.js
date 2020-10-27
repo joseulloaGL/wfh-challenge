@@ -30,7 +30,7 @@ export const createFigma = (token) => {
    */
   const getFile = async key => {
     try {
-      const data = await fetch(`${API_URL}/files/${key}`, {
+      let data = await fetch(`${API_URL}/files/${key}`, {
         headers: getHeaders()
       }).then(response => response.json())
       return data
@@ -48,7 +48,7 @@ export const createFigma = (token) => {
    */
   const getFileNodes = async key => {
     try {
-      const data = await fetch(`${API_URL}/files/${key}/nodes`, {
+      let data = await fetch(`${API_URL}/files/${key}/nodes`, {
         headers: getHeaders()
       }).then(response => response.json())
       return data
@@ -68,7 +68,7 @@ export const createFigma = (token) => {
    */
   const getImage = async (key, ids) => {
     try {
-      const data = await fetch(`${API_URL}/images/${key}?format=svg&svg_include_id=true&ids=${ids.join(',')}`, {
+      let data = await fetch(`${API_URL}/images/${key}?format=svg&svg_include_id=true&ids=${ids.join(',')}`, {
         headers: getHeaders()
       }).then(response => response.json())
       return data
@@ -86,8 +86,8 @@ export const createFigma = (token) => {
    * @returns image SVG text.
    */
   const getImageSVG = async (key, id) => {
-    const data = await getImage(key, [id])
-    const url = data.images[id]
+    let data = await getImage(key, [id])
+    let url = data.images[id]
 
     return await fetch(url).then(response => response.text())
   }

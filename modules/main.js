@@ -8,7 +8,7 @@ const loadingImage = document.getElementById('image')
 const container = document.getElementById('image-container')
 
 const loadImage = async () => {
-  const img = await figma.getImageSVG(FILE_ID, '0:1')
+  let img = await figma.getImageSVG(FILE_ID, '0:1')
   container.innerHTML = img
 }
 

@@ -14,13 +14,13 @@ deployed somewhere (Netlify, Firebase, Vercel, Stackblitz, etc).
 28th at midnight CST).
 
 ### Topics
-- SVG Animations.      [ ]
+- SVG Animations.      [ ✅ ]
 - JS Modules.          [ ✅ ]
-- Regular Expressions. [❌ ]
+- Regular Expressions. [ ❌ ]
 - Async/Await.         [ ✅ ]
-- Flexbox.             [ ]
+- Flexbox.             [ ? ]
 - var, const & let.    [ ]
-- Closures.            [ ]
+- Closures.            [ ✅ ]
 
 ### TODO
 - animate
