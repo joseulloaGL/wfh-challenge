@@ -154,7 +154,7 @@
 
 #line-21 {
   opacity: 0;
-  animation: appear-disappear 8s 3.3s ease infinite;
+  animation: appear-disappear 8s 3.2s ease infinite;
 }
 
 @keyframes spin {

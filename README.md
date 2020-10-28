@@ -28,9 +28,3 @@ deployed somewhere (Netlify, Firebase, Vercel, Stackblitz, etc).
 
 - Open-source illustrations:  [undraw](https://undraw.co).
 - SVG Editor: [figma](https://figma.com).
-
-### TODO
-- favicon.ico
-- animate code lines
-- improve bug movement
-- animate circle
