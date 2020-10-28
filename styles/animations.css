@@ -29,13 +29,13 @@
 }
 
 #code-window {
-  animation: minimize 8s ease-in-out infinite;
+  animation: minimize 8s 2s ease-in-out infinite;
   transform-origin: bottom right;
   transform-box: fill-box;
 }
 
 #bug {
-  animation: bug-movement 15s ease infinite alternate;
+  animation: bug-movement 3s linear infinite;
   transform-origin: center;
   transform-box: fill-box;
 }
@@ -50,6 +50,111 @@
   animation: more-than-movement 2s ease infinite alternate;
   transform-origin: center;
   transform-box: fill-box;
+}
+
+#line-1 {
+  opacity: 0;
+  animation: appear-disappear 8s 1s ease infinite;
+}
+
+#line-2 {
+  opacity: 0;
+  animation: appear-disappear 8s 1.1s ease infinite;
+}
+
+#line-3 {
+  opacity: 0;
+  animation: appear-disappear 8s 1.2s ease infinite;
+}
+
+#line-4 {
+  opacity: 0;
+  animation: appear-disappear 8s 1.3s ease infinite;
+}
+
+#line-5 {
+  opacity: 0;
+  animation: appear-disappear 8s 1.4s ease infinite;
+}
+
+#line-6 {
+  opacity: 0;
+  animation: appear-disappear 8s 1.5s ease infinite;
+}
+
+#line-7 {
+  opacity: 0;
+  animation: appear-disappear 8s 1.6s ease infinite; 
+}
+
+#line-8 {
+  opacity: 0;
+  animation: appear-disappear 8s 1.7s ease infinite;
+}
+
+#line-9 {
+  opacity: 0;
+  animation: appear-disappear 8s 1.8s ease infinite;
+}
+
+#line-10 {
+  opacity: 0;
+  animation: appear-disappear 8s 2s ease infinite;
+}
+
+#line-11 {
+  opacity: 0;
+  animation: appear-disappear 8s 2.1s ease infinite;
+}
+
+#line-12 {
+  opacity: 0;
+  animation: appear-disappear 8s 2.2s ease infinite;
+}
+
+#line-13 {
+  opacity: 0;
+  animation: appear-disappear 8s 2.3s ease infinite;
+}
+
+#line-14 {
+  opacity: 0;
+  animation: appear-disappear 8s 2.5s ease infinite;
+}
+
+#line-15 {
+  opacity: 0;
+  animation: appear-disappear 8s 2.6s ease infinite;
+}
+
+#line-16 {
+  opacity: 0;
+  animation: appear-disappear 8s 2.7s ease infinite;
+}
+
+#line-17 {
+  opacity: 0;
+  animation: appear-disappear 8s 2.8s ease infinite;
+}
+
+#line-18 {
+  opacity: 0;
+  animation: appear-disappear 8s 2.9s ease infinite;
+}
+
+#line-19 {
+  opacity: 0;
+  animation: appear-disappear 8s 3s ease infinite;
+}
+
+#line-20 {
+  opacity: 0;
+  animation: appear-disappear 8s 3.1s ease infinite;
+}
+
+#line-21 {
+  opacity: 0;
+  animation: appear-disappear 8s 3.3s ease infinite;
 }
 
 @keyframes spin {
@@ -140,15 +245,14 @@
 }
 
 @keyframes bug-movement {
-  0%, 100% {
-    transform: translate(0, 0) rotateZ(0deg);
-    animation-timing-function: ease-in;
+  0%, 100%, 50%, 70%, 30% {
+    transform: rotateZ(0deg) scale(1,1);
   }
-  10% {
-    transform: translate(0, 0) rotateZ(90deg);
+  40% {
+    transform: rotateZ(30deg) scale(1.5,1.5);
   }
-  20% {
-    transform: translate(11vw, 0vh) rotateZ(90deg);
+  60% {
+    transform: rotateZ(-30deg) scale(1.5,1.5);
   }
 }
 
@@ -171,5 +275,14 @@
   100% {
     transform: translate(3vw, 0);
     animation-timing-function: ease-out;
+  }
+}
+
+@keyframes appear-disappear {
+  0%, 9%, 51%, 100% {
+    opacity: 0;
+  }
+  10%, 50% {
+    opacity: 1;
   }
 }
