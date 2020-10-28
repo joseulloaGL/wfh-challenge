@@ -209,11 +209,11 @@
     animation-timing-function: ease-in;
   }
   50% {
-    transform: translate(1vw, 3vh) rotateZ(180deg);
+    transform: translate(-3vw, 3vh) rotateZ(180deg);
     animation-timing-function: ease-out;
   }
   100% {
-    transform: translate(7vw, 3vh) rotateZ(360deg);
+    transform: translate(5vw, 3vh) rotateZ(360deg);
   }
 }
 
@@ -223,11 +223,11 @@
     animation-timing-function: ease-in;
   }
   25%, 75% {
-    transform: translate(-8vw, -3.5vh) rotateZ(60deg);
+    transform: translate(-8vw, -4.5vh) rotateZ(60deg);
     animation-timing-function: ease-out;
   }
   50% {
-    transform: translate(-10vw, 8vh) rotateZ(360deg);
+    transform: translate(-10vw, -1vh) rotateZ(360deg);
   }
 }
 
@@ -237,10 +237,10 @@
     animation-timing-function: ease-in;
   }
   25%, 75% {
-    transform: translate(8vw, 3.5vh) rotateZ(60deg);
+    transform: translate(7vw, 3.5vh) rotateZ(60deg);
   }
   50% {
-    transform: translate(10vw, -8vh) rotateZ(180deg);
+    transform: translate(9vw, -8vh) rotateZ(180deg);
   }
 }
 
