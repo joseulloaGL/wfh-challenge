@@ -1,7 +1,9 @@
 ## WFH Challenge
 
-- Site: https://joseulloa-wfh-challenge.netlify.app/
-- Repo: https://github.com/joseulloaGL/wfh-challenge
+Submission for the Web from home challenge.
+
+- Website: https://joseulloa-wfh-challenge.netlify.app/
+- Github Repository: https://github.com/joseulloaGL/wfh-challenge
 
 ### Requirements
 1. Retrieve a SVG from F​igmaAPI​ using browser’s fetch API.
@@ -18,15 +20,17 @@ deployed somewhere (Netlify, Firebase, Vercel, Stackblitz, etc).
 - JS Modules.          [ ✅ ]
 - Regular Expressions. [ ❌ ]
 - Async/Await.         [ ✅ ]
-- Flexbox.             [ ? ]
-- var, const & let.    [ ]
+- Flexbox.             [ ✅ ]
+- var, const & let.    [ ✅ ]
 - Closures.            [ ✅ ]
 
+## Resources
+
+- Open-source illustrations:  [undraw](https://undraw.co).
+- SVG Editor: [figma](https://figma.com).
+
 ### TODO
-- animate
 - favicon.ico
-
-## Credits
-
-- undraw - undraw.co
-- Figma
+- animate code lines
+- improve bug movement
+- animate circle

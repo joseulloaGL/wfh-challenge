@@ -16,7 +16,6 @@
   transform-box: fill-box;
 }
 
-
 #right-hand {
   animation: swing 4s ease-in-out infinite alternate;
   transform-origin: bottom;
@@ -30,8 +29,26 @@
 }
 
 #code-window {
-  animation: minimize 1s 3s linear infinite alternate;
+  animation: minimize 8s ease-in-out infinite;
   transform-origin: bottom right;
+  transform-box: fill-box;
+}
+
+#bug {
+  animation: bug-movement 15s ease infinite alternate;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#less-than-symbol {
+  animation: less-than-movement 2s ease infinite alternate;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#more-than-symbol {
+  animation: more-than-movement 2s ease infinite alternate;
+  transform-origin: center;
   transform-box: fill-box;
 }
 
@@ -54,19 +71,20 @@
 }
 
 @keyframes minimize {
-  0% {
+  0%, 100%, 65%, 47% {
     transform: scale(1) translate(0, 0);
   }
-  25% {
+  48%, 64% {
     transform: scale(.75) translate(0, 2vh);
+    animation-timing-function: ease-in;
   }
-  50% {
+  49%, 63% {
     transform: scale(.5) translate(0, 5vh);
   }
-  75% {
+  50%, 62% {
     transform: scale(.25) translate(0, 8vh);
   }
-  100% {
+  51%, 61% {
     transform: scale(0) translate(0, 25vh);
   }
 }
@@ -94,45 +112,64 @@
   }
 }
 
-
 @keyframes movement-2 {
-  0% {
+  0%, 100% {
     transform: translate(0, 0) rotateZ(0deg);
     animation-timing-function: ease-in;
   }
-  25% {
+  25%, 75% {
     transform: translate(-8vw, -3.5vh) rotateZ(60deg);
     animation-timing-function: ease-out;
   }
   50% {
     transform: translate(-10vw, 8vh) rotateZ(360deg);
   }
-  75% {
-    transform: translate(-8vw, 15vh) rotateZ(60deg);
-    animation-timing-function: ease-out;
-  }
-  100% {
-    transform: translate(0, 0) rotateZ(0deg);
-    animation-timing-function: ease-in;
-  }
 }
 
 @keyframes movement-3 {
-  0% {
+  0%, 100% {
     transform: translate(0, 0) rotateZ(0deg);
     animation-timing-function: ease-in;
   }
-  25% {
+  25%, 75% {
     transform: translate(8vw, 3.5vh) rotateZ(60deg);
   }
   50% {
     transform: translate(10vw, -8vh) rotateZ(180deg);
   }
-  75% {
-    transform: translate(8vw, -3.5vh) rotateZ(60deg);
-    animation-timing-function: ease-out;
+}
+
+@keyframes bug-movement {
+  0%, 100% {
+    transform: translate(0, 0) rotateZ(0deg);
+    animation-timing-function: ease-in;
+  }
+  10% {
+    transform: translate(0, 0) rotateZ(90deg);
+  }
+  20% {
+    transform: translate(11vw, 0vh) rotateZ(90deg);
+  }
+}
+
+@keyframes less-than-movement {
+  0% {
+    transform: translate(0, 0);
+    animation-timing-function: ease-in;
   }
   100% {
-    transform: translate(0, 0) rotateZ(0deg);
+    transform: translate(-3vw, 0);
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes more-than-movement {
+  0% {
+    transform: translate(0, 0);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translate(3vw, 0);
+    animation-timing-function: ease-out;
   }
 }
